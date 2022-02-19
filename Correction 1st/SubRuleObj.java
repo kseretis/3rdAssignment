@@ -1,6 +1,5 @@
 package org.languagetool.dev.archive;
 
-// Smell Dedector, New Class
 public class SubRuleObj {
 
   int subRuleCount;
@@ -11,7 +10,7 @@ public class SubRuleObj {
     inRuleGroup = false;
   }
 
-  public SubRuleObj xmlLineContains(String xmlLine){
+  public void xmlLineContains(String xmlLine){
 
     if (xmlLine.contains("<rulegroup")) {
       this.subRuleCount = 0;
@@ -23,6 +22,5 @@ public class SubRuleObj {
       this.subRuleCount++;
     }
 
-    return this;
   }
 }
